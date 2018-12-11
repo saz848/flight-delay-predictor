@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <!-- LESS CSS-->
+        <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
+        <link rel="stylesheet/less" type="text/css" href="styles/abstract.less" />
+
+            <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="styles/less.js" type="text/javascript" href="styles/less.js"></script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script> -->
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Flight Delay Predictor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link active" href="abstract.html">Abstract <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="report.html">Report</a>
+            </div>
+            </div>
+        </nav>
+
+        <title>Flight Delay Predictor</title>
+
+    </head>
+    
+    <body>
+        <div class="content-wrapper">
+            <h3>Abstract</h3>
+            <div class="text-wrapper">
+                <p>Our project aimed at solving two tasks: predict whether a flight would be cancelled and, 
+                    if it were not cancelled, the departure delay in minutes. The first task is a binary 
+                    classification problem and the second is a regression problem. We used two data sources: 
+                    historical flight data from the American Statistical Association, and weather data from 
+                    National Climate Data Center. Our best model for both tasks was a gradient boosting model, 
+                    implemented using Microsoft’s LightGBM library. With this model, we are able to predict 
+                    cancellations at 99.9% accuracy, an improvement of ~5% from the baseline. We are also able
+                    to predict departure delay approximately within 29 minutes of the actual delay, an improvement 
+                    of 13 minutes from the baseline.
+                </p>
+                <div class="image-wrapper">
+                    <img src="images/figure.JPG">
+                    <figcaption>Feature importance by split and gain of our LightGBM model in predicting delay (Task II)
+                        </figcaption>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </body>
+
+<!-- Footer -->
+    <footer class="page-footer font-small">
+
+        <!-- Copyright -->
+        <div class="footer navbar-fixed-bottom text-center">Background image courtesy of Wikimedia Commons
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+  <!-- Footer -->
+</html>
