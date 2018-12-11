@@ -1,3 +1,6 @@
+@tablet: 768px;
+@phone: 375px; 
+
 body {
     position: relative;
     margin: 0;
@@ -9,6 +12,7 @@ body {
     display: compact;
     background-size: cover; 
 }
+
 html {
     height: 100%; 
 }
@@ -25,7 +29,19 @@ html {
         h1 {
             margin-bottom: 0; 
             font-weight: 600; 
-            font-size: 64px; 
+            font-size: 62px; 
+        }
+
+        @media screen and (max-width: @tablet) { 
+            h1 {
+                font-size: 48px; 
+            }
+        }
+
+        @media screen and (max-width: @phone) { 
+            h1 {
+                font-size: 24px; 
+            }
         }
     }
 
@@ -34,7 +50,35 @@ html {
         margin-top: 10px; 
         width: 50%;
         h3 {
-            font-size: 24px; 
+            font-size: 22px; 
+        }
+
+        @media screen and (max-width: @tablet) { 
+            h3 {
+                font-size: 18px; 
+            }
+        }
+
+        @media screen and (max-width: @phone) { 
+            h3 {
+                margin-top: 5px; 
+                font-size: 14px; 
+                width: 100%; 
+            }
+        }
+    }
+
+    @media screen and (max-width: @tablet) { 
+        .main-subheading {
+            margin-top: 5px;  
+        }
+    }
+
+    
+    @media screen and (max-width: @phone) { 
+        .main-subheading {
+            display: inline; 
+ 
         }
     }
 
@@ -47,7 +91,28 @@ html {
         .intro-paragraph {
             flex-basis: 50%; 
             padding: 25px; 
+
+            @media screen and (max-width: @tablet) { 
+                p {
+                    font-size: 14px; 
+                }
+            }
         }
+        @media screen and (max-width: @tablet) { 
+            .intro-paragraph {
+                padding: 12px; 
+                flex-basis: 60%; 
+            }
+        }
+
+        @media screen and (max-width: @phone) { 
+            .intro-paragraph {
+                padding: 12px; 
+                margin-top: 0px; 
+                flex-basis: 100%; 
+            }
+        }
+
         .intro-members {
             flex-basis: 35%; 
             padding: 25px; 
@@ -64,12 +129,62 @@ html {
                 em {
                     font-size: 12px; 
                 }
+
+                @media screen and (max-width: @tablet) { 
+                    li {
+                        font-size: 11px; 
+                    }
+                    em {
+                        font-size: 10px; 
+                    }
+                }
                 list-style-type: none;
                 text-align: left; 
             }
         }
+
+        @media screen and (max-width: @tablet) { 
+            .intro-members {
+                padding: 12px; 
+                flex-basis: 45%;
+
+                #title-info {
+                    font-size: 14px; 
+                }
+
+                #class-info {
+                    font-size: 12px; 
+                }
+            }
+
+        }
+
+        @media screen and (max-width: @phone) { 
+            .intro-members {
+                padding: 5px;
+                flex-basis: 100%; 
+            }
+        }
+    }
+
+    @media screen and (max-width: @tablet) { 
+        .main-intro {
+            padding: 20px; 
+        }
+    }
+
+    @media screen and (max-width: @phone) { 
+        .main-intro {
+            margin: 0; 
+            padding: 10px; 
+            flex-direction: column; 
+            flex-flow: wrap; 
+        }
     }
 }
+
+
+
 
 footer {
     padding: 15px 0px; 
