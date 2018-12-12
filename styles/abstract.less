@@ -2,7 +2,7 @@
 @tablet: 450px; 
 
 body {
-    position: relative;
+    //position: relative;
     margin: 0;
     padding-bottom: 25rem;
     min-height: 100%;
@@ -11,6 +11,7 @@ body {
     display: compact;
     background-size: cover;  
 }
+
 
 .content-wrapper {
     background: rgba(255, 255, 255, 0.85);
@@ -23,9 +24,13 @@ body {
         width: 90%; 
     }
 
+    .report-wrapper {
+        margin-bottom: 100em; 
+    }
 
     .text-wrapper {
         margin-top: 10px; 
+        margin-bottom: 10px;
         display: flex; 
         justify-content: space-between; 
         flex-flow: column; 
@@ -69,6 +74,8 @@ body {
 
     }
 
+
+
     @media screen and (min-width: @tablet) {
         .text-wrapper {
             flex-flow: row; 
@@ -80,15 +87,15 @@ body {
 
 footer {
     font-size: 14px; 
-    margin-top: -15%; 
     color: white; 
     background:#404040; 
     width: 100%;
 
     @media screen and (min-width: @full) {
-        position: absolute;
-        left: 0; 
-        right: 0; 
-        bottom: 0; /* stick to bottom */
+
+        //position: absolute;
+        //left: 0; 
+        //right: 0; 
+        //bottom: 0; /* stick to bottom */
     }
 }

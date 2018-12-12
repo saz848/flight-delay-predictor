@@ -3,7 +3,7 @@
 
 body {
     position: relative;
-    margin: 0;
+    margin: 0px 0px 25px 0px;
     padding-bottom: 11rem;
     min-height: 100%;
     height: 100%; 
@@ -17,11 +17,22 @@ html {
     height: 100%; 
 }
 
+.site-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .title-wrapper {
+    flex: 1; 
     margin-top: 100px; 
     text-align: center; 
     background: rgba(255, 255, 255, 0.85);
-    padding: 50px 0px 75px 0px;  
+    padding: 50px 0px 50px 0px; 
+    
+    @media screen and (min-width: @full) {
+        margin-bottom: 30px; 
+    }
 
     .main-title {
         text-align: center; 
@@ -206,12 +217,11 @@ footer {
     background:#404040; 
     width: 100%;
 
-
     @media screen and (min-width: @full) {
-        position: absolute;
-        left: 0; 
-        right: 0; 
-        bottom: 0; /* stick to bottom */
+        //position: absolute;
+        //left: 0; 
+        //right: 0; 
+        //bottom: 0; /* stick to bottom */
     }
 
 }
