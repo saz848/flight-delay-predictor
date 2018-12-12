@@ -86,59 +86,66 @@ html {
 
 
     .main-intro {
+        margin: 0; 
+        padding: 10px; 
+        flex-direction: column; 
+        flex-flow: wrap; 
         display: flex; 
-        flex-direction: row; 
-        flex-flow: row; 
         justify-content: center; 
-        margin-top: 25px; 
+       
         .intro-paragraph {
-            flex-basis: 50%; 
-            padding: 25px; 
+            padding: 12px; 
+            margin-top: 0px; 
+            flex-basis: 100%; 
 
-            @media screen and (max-width: @tablet) { 
+            @media screen and (min-width: @tablet) { 
                 p {
                     font-size: 14px; 
                 }
             }
         }
-        @media screen and (max-width: @tablet) { 
+        @media screen and (min-width: @tablet) { 
             .intro-paragraph {
                 padding: 12px; 
-                flex-basis: 60%; 
-            }
-        }
-
-        @media screen and (max-width: @full) { 
-            .intro-paragraph {
-                padding: 12px; 
-                margin-top: 0px; 
                 flex-basis: 100%; 
             }
         }
 
+        @media screen and (min-width: @full) { 
+            .intro-paragraph {
+                flex-basis: 50%; 
+                padding: 25px; 
+            }
+        }
+
         .intro-members {
-            flex-basis: 35%; 
-            padding: 25px; 
+            padding: 5px;
+            flex-basis: 100%; 
             b {
                 #title-info {
-                    font-size: 18px; 
+                    font-size: 11px; 
                 }
 
                 #class-info {
-                    font-size: 14px; 
+                    font-size: 10px; 
                 }
             }
             ul {
+                padding-left: 10px; 
+                li {
+                    font-size: 12px; 
+                }
                 em {
                     font-size: 12px; 
                 }
 
-                @media screen and (max-width: @tablet) { 
+
+                @media screen and (min-width: @tablet) { 
                     li {
-                        font-size: 11px; 
+                        font-size: 18px; 
                     }
                     em {
-                        font-size: 10px; 
+                        font-size: 14px; 
                     }
                 }
                 list-style-type: none;
@@ -146,42 +153,44 @@ html {
             }
         }
 
-        @media screen and (max-width: @tablet) { 
+        @media screen and (min-width: @tablet) { 
             .intro-members {
                 padding: 12px; 
-                flex-basis: 45%;
+                flex-basis: 100%;
 
                 #title-info {
-                    font-size: 14px; 
+                    font-size: 15px; 
                 }
 
                 #class-info {
-                    font-size: 12px; 
+                    font-size: 15px; 
                 }
             }
 
         }
 
-        @media screen and (max-width: @full) { 
+        @media screen and (min-width: @full) { 
             .intro-members {
-                padding: 5px;
-                flex-basis: 100%; 
+                flex-basis: 35%; 
+                padding: 25px; 
             }
         }
     }
 
-    @media screen and (max-width: @tablet) { 
+    @media screen and (min-width: @tablet) { 
         .main-intro {
-            padding: 20px; 
+            // flex-direction: row; 
+            // flex-flow: row; 
+            margin-top: 25px; 
+            padding: 10px; 
         }
     }
 
-    @media screen and (max-width: @full) { 
+    @media screen and (min-width: @full) { 
         .main-intro {
-            margin: 0; 
-            padding: 10px; 
-            flex-direction: column; 
-            flex-flow: wrap; 
+            flex-direction: row; 
+            flex-flow: row; 
+            margin-top: 25px; 
         }
     }
 }
@@ -194,11 +203,16 @@ footer {
     font-size: 14px; 
     color: white; 
     background:#404040; 
-    position: absolute;
     width: 100%;
-    left: 0; 
-    right: 0; 
-    bottom: 0; /* stick to bottom */
+
+
+    @media screen and (min-width: @full) {
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        bottom: 0; /* stick to bottom */
+    }
+
 }
 
 
