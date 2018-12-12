@@ -1,5 +1,5 @@
-@tablet: 768px;
-@phone: 375px; 
+@full: 768px;
+@tablet: 400px; 
 
 body {
     position: relative;
@@ -29,58 +29,61 @@ html {
         h1 {
             margin-bottom: 0; 
             font-weight: 600; 
-            font-size: 62px; 
+            font-size: 24px; 
         }
 
-        @media screen and (max-width: @tablet) { 
+        @media screen and (min-width: @tablet) { 
             h1 {
-                font-size: 48px; 
+                font-size: 36px; 
             }
         }
 
-        @media screen and (max-width: @phone) { 
+        @media screen and (min-width: @full) { 
             h1 {
-                font-size: 24px; 
+                font-size: 62px; 
             }
         }
     }
 
     .main-subheading {
-        display: inline-block; 
-        margin-top: 10px; 
-        width: 50%;
+        display: inline; 
         h3 {
-            font-size: 22px; 
+            margin-top: 5px; 
+            font-size: 14px; 
+            width: 100%; 
         }
 
-        @media screen and (max-width: @tablet) { 
+        @media screen and (min-width: @tablet) { 
             h3 {
-                font-size: 18px; 
+                font-size: 16px; 
             }
         }
 
-        @media screen and (max-width: @phone) { 
+        @media screen and (min-width: @full) { 
             h3 {
-                margin-top: 5px; 
-                font-size: 14px; 
-                width: 100%; 
+                font-size: 22px; 
             }
         }
     }
 
-    @media screen and (max-width: @tablet) { 
+    @media screen and (min-width: @tablet) { 
         .main-subheading {
+            margin-top: 10px; 
+            width: 50%;
             margin-top: 5px;  
         }
     }
 
     
-    @media screen and (max-width: @phone) { 
+    @media screen and (min-width: @full) { 
         .main-subheading {
-            display: inline; 
+            margin-top: 10px; 
+            width: 50%;
+            display: inline-block; 
  
         }
     }
+
 
     .main-intro {
         display: flex; 
@@ -105,7 +108,7 @@ html {
             }
         }
 
-        @media screen and (max-width: @phone) { 
+        @media screen and (max-width: @full) { 
             .intro-paragraph {
                 padding: 12px; 
                 margin-top: 0px; 
@@ -159,7 +162,7 @@ html {
 
         }
 
-        @media screen and (max-width: @phone) { 
+        @media screen and (max-width: @full) { 
             .intro-members {
                 padding: 5px;
                 flex-basis: 100%; 
@@ -173,7 +176,7 @@ html {
         }
     }
 
-    @media screen and (max-width: @phone) { 
+    @media screen and (max-width: @full) { 
         .main-intro {
             margin: 0; 
             padding: 10px; 
